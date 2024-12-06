@@ -1,0 +1,56 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: #f0f8ff;
+  color: #333;
+}
+
+.app {
+  text-align: center;
+}
+
+.header {
+  background-color: #008000;
+  color: white;
+  padding: 20px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.case {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+.case.locked {
+  background-color: #d3d3d3;
+}
+
+.case.unlocked {
+  background-color: #ffd700;
+}
+
+.case .surprise {
+  font-size: 14px;
+  color: #008000;
+}
+
+.grinch {
+  color: red;
+  font-weight: bold;
+}
+
+footer {
+  padding: 20px;
+  background: #333;
+  color: white;
+}

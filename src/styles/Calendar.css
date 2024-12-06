@@ -1,0 +1,93 @@
+/* Global styling for the advent calendar */
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between the cases */
+    padding: 20px;
+    background-color: #f7f9fc; /* Light festive background */
+    border: 2px solid #c0c0c0; /* Subtle border around the calendar */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    max-width: 900px; /* Restrict the calendar's maximum width */
+    margin: 20px auto; /* Center the calendar on the page */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Styling for each case */
+  .case {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* Default text color */
+    background-color: #d3d3d3; /* Default locked case color */
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    margin: 5px;
+  }
+  
+  /* Hover effect for locked cases */
+  .case:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Styling for unlocked cases */
+  .case.unlocked {
+    background-color: #ffd700; /* Festive gold for unlocked cases */
+    color: #008000; /* Green text for unlocked cases */
+    border: 2px solid #f4a460; /* Highlighted border */
+    height:200px;
+    width:120px;
+  }
+  
+  /* Grinch-stolen cases */
+  .case .grinch {
+    background-color: #228b22; /* Grinch green */
+    color: #fff; /* White text for contrast */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  /* Surprise content */
+  .case .surprise {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    
+  }
+  
+  /* Locked cases */
+  .case.locked {
+    background-color: #ccc;
+    height:200px;
+    width:120px;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .calendar {
+      grid-template-columns: repeat(3, 1fr); /* Adjust to 3 cases per row */
+    }
+  
+    .case {
+      height: 80px; /* Adjust case height */
+      font-size: 18px; /* Adjust text size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .calendar {
+      grid-template-columns: repeat(2, 1fr); /* Adjust to 2 cases per row */
+    }
+  
+    .case {
+      height: 70px; /* Smaller cases for smaller screens */
+      font-size: 16px; /* Adjust text size further */
+    }
+  }
